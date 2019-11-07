@@ -1,0 +1,15 @@
+<p>{{nom}}</p>
+<h1>
+    {{nom.length}}<br/>
+    {{nom.toUpperCase()}}<br/>
+    {{infos()}}<br/><br/>
+    <input type="text" [value]="nom" [disabled]="actif"/>
+    <button bind-disabled="!actif" (click)="onAfficher()">Afficher</button><br/><br/>
+
+    <input type ="text" (keyup.enter)="onKeyUp1($event)" /><br/><br/>
+    {{contenu}}
+    <input type ="text" #textbox />
+<button (click)="onAfficherContenu(textbox.value)">Afficher</button>
+<br/><br/><input type="text" [(ngModel)]="message">
+{{message}}
+</h1>

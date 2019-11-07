@@ -1,0 +1,27 @@
+<style>
+img{
+    width:150px;
+    height: 150px;
+}
+
+</style>
+<h1>Liste des candidats</h1>
+<p ><img [src]="tabCandidats[0].image" >
+    Nom:{{tabCandidats[0].nom}} 
+    <input type="checkbox"  disabled [(ngModel)]="!a"> Indépendant 
+    NB Followres : {{tabCandidats[0].nb}} 
+    <button (click)="incri1()">Follow</button>
+</p>
+
+<p><img [src]="tabCandidats[1].image" >
+    Nom:{{tabCandidats[1].nom}} 
+    <input type="checkbox" [(ngModel)]="!b" disabled > Indépendant 
+    NB Followres : {{tabCandidats[1].nb}} <button (click)="incri2()" >Follow</button>
+</p>
+
+<p><img [src]="tabCandidats[2].image" >
+    Nom:{{tabCandidats[2].nom}} 
+    <input type="checkbox" [(ngModel)]="!c"disabled > Indépendant 
+    NB Followres : {{tabCandidats[2].nb}} <button  (click)="incri3()">Follow</button>
+</p>
+<p>Nombre des candidats Indépendants : {{nbFollow()}}</p>
